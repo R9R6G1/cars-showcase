@@ -1,7 +1,5 @@
 "use client";
-
 import { useEffect, useState } from "react";
-
 import Image from "next/image";
 import { Hero, CustomFilter, SearchBar, CarCard, ShowMore } from "@/components";
 import { fatchCars } from "@/utils";
@@ -83,7 +81,7 @@ export default function Home() {
             {loading && (
               <div className="mt-16 w-full flex-center">
                 <Image
-                  src="/next.svg"
+                  src="/loader.svg"
                   alt="loader"
                   width={50}
                   height={50}
@@ -101,7 +99,7 @@ export default function Home() {
         ) : (
           <div className="home__error-container">
             <h2 className="text-black text-xl font-bold">Oops, no results</h2>
-            {/* <p>{allCars?.message}</p> */}
+            <p>{allCars?.message}</p>
           </div>
         )}
       </div>
